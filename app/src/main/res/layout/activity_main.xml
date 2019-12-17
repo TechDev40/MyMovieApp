@@ -1,16 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	tools:context=".DetailsActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="@string/title"
-		android:textColor="@color/purple"
-		android:textSize="@dimen/text_title_size"
-		android:layout_centerInParent="true" />
 
-</RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".DetailsActivity">
+
+        <Button
+            android:id="@+id/details_btn_trailer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="21dp"
+            android:text="@string/btn_tv_movie_trailer"
+            app:layout_constraintStart_toEndOf="@+id/details_iv_main3"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/details_iv_background3"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/background_image"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/details_iv_main3"
+            android:layout_width="141dp"
+            android:layout_height="207dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="244dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/details_tv_overview2"
+            app:layout_constraintEnd_toStartOf="@+id/details_btn_trailer2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/main_image"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/details_tv_title_name2"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/details_tv_title_name"
+            android:textSize="@dimen/text_title_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/details_iv_main3"
+            app:layout_constraintTop_toBottomOf="@+id/details_iv_background3" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="87dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/details_tv_released"
+            android:textSize="@dimen/text_title_size"
+            app:layout_constraintStart_toEndOf="@+id/details_iv_main3"
+            app:layout_constraintTop_toBottomOf="@+id/details_tv_title_name2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/details_tv_released_date"
+            android:textSize="@dimen/text_title_size"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/details_tv_title_name2" />
+
+        <TextView
+            android:id="@+id/details_tv_overview2"
+            android:layout_width="81dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/details_tv_overview"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/text_title_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_iv_main3" />
+
+        <TextView
+            android:id="@+id/details_tv_overview_text2"
+            android:layout_width="406dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="300dp"
+            android:text="@string/details_tv_overview_text"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_iv_background3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
